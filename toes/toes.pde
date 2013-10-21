@@ -9,6 +9,9 @@ PShape foot;
 PShape nails;
 PShape feather;
 
+//int m;
+//int lastMinute = 0;
+
 void setup() {
   size(1280, 2400);
   background(255);
@@ -41,6 +44,18 @@ public String sketchRenderer() {
 }
 
 void draw() {
+//  m = minute();
+//  if ((m - 3) > lastMinute) {
+//    heehee.pause();
+//    heehee = minim.loadFile("heeheelong.wav");
+//    lastMinute = m;
+//  }
+
+//  if (frameCount % (1800 * 4) == 0) {
+//    heehee.pause();
+//    heehee = minim.loadFile("heehee.wav");  
+//  }
+  
   background(255);
   fill(255, 0, 0);
 
