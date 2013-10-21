@@ -9,6 +9,8 @@ PShape foot;
 PShape nails;
 PShape feather;
 
+String audioFile; 
+
 //int m;
 //int lastMinute = 0;
 
@@ -24,7 +26,13 @@ void setup() {
   feather = loadShape("feather.svg");
 
   minim = new Minim(this);
-  heehee = minim.loadFile("heeheelong.wav");
+  if (canPlayOgg()) {
+    audioFile = "heeheelong.ogg";
+  } else {
+    audioFile = "heeheelong.mp3";
+  }
+  
+  heehee = minim.loadFile(audioFile);
 }
 
 boolean sketchFullScreen() {
@@ -51,10 +59,10 @@ void draw() {
 //    lastMinute = m;
 //  }
 
-//  if (frameCount % (1800 * 4) == 0) {
-//    heehee.pause();
-//    heehee = minim.loadFile("heehee.wav");  
-//  }
+  if (frameCount % (9000) == 0) {
+    heehee.pause();
+    heehee = minim.loadFile(audioFile);  
+  }
   
   background(255);
   fill(255, 0, 0);
