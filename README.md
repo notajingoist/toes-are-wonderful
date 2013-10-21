@@ -1,4 +1,4 @@
 toes-are-wonderful
 ==================
 
-heehee
+heehee. tickle your fancy at toesarewonderful.com
